@@ -2,8 +2,8 @@
 #include <climits>
 using namespace std;
 
-const int maxm=5000;
-const int maxn=3000;
+const int maxm=6001;
+const int maxn=4001;
 int n,m,cnt;
 struct edge{
     int start;
@@ -36,7 +36,7 @@ int main() {
         cin>>u>>v>>w;
         add_edge(u,v,w);
     }
-    for(int i=0;i<n-1;++i){
+    for(int i=0;i<n;++i){
         for(int j=0;j<cnt;++j){
             if(dis[edges[j].start]+edges[j].w<dis[edges[j].to])
                 dis[edges[j].to]=dis[edges[j].start]+edges[j].w;
