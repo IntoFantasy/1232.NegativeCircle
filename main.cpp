@@ -14,10 +14,21 @@ void init(){
     for(int i=0;i<=n;++i) head[i]=-1;
     cnt=0;
 }
-
+void add_edge(int u, int v, int w){
+    edges[cnt].to=v;
+    edges[cnt].w=w;
+    edges[cnt].next=head[u];
+    head[u]=cnt++;
+}
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    cin>>n>>n;
+    init();
+    int u,v,w;
+    for(int _=0;_<m;++_){
+        cin>>u>>v>>w;
+        add_edge(u,v,w);
+    }
+
 }
