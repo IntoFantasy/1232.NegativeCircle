@@ -8,7 +8,7 @@ struct edge{
     int to;   //end
     int w; //weight
     int next;
-};
+}edges[maxm];
 
 
 int main() {
