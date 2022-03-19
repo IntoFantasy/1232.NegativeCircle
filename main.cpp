@@ -9,6 +9,12 @@ struct edge{
     int w; //weight
     int next;
 }edges[maxm];
+int head[maxn];
+void init(){
+    for(int i=0;i<=n;++i) head[i]=-1;
+    cnt=0;
+}
+
 
 
 int main() {
